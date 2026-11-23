@@ -1,0 +1,53 @@
+{
+  "name": "dsh-remote-file-download",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "description": "Stream-download host and dsh-remote SSH files directly from the DeepSeek Harness (DSH) Web UI, including unpreviewable and large files.",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "file-download",
+    "remote-access"
+  ],
+  "author": "Wang Haotian <74957834+half-lang@users.noreply.github.com>",
+  "homepage": "https://github.com/half-lang/dsh-remote-file-download#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/half-lang/dsh-remote-file-download.git"
+  },
+  "bugs": {
+    "url": "https://github.com/half-lang/dsh-remote-file-download/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "LICENSE",
+    "README.md",
+    "README.zh.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-documentpreview",
+        "@deepseek-ai/dsh-client-ui-context-menu",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}

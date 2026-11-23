@@ -1,0 +1,4 @@
+- insert:
+    - id: remote-file-download
+      name: 'dsh-remote-file-download'
+      config: {}

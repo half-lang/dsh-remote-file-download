@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Remote file download",
+    "description": "Adds streaming download actions to the document preview header ('Download'), the unpreviewable file empty state ('Download original file'), and the file context menu ('Direct download (no size limit)'). Designed for remote access to files that cannot be rendered in DSH or exceed the 32 MiB preview byte limit. Requests require DSH browser authentication and Host/Origin trust checks. By default any regular file readable by the host user can be downloaded; no model requests are made. Disabling removes the download route and UI buttons."
+  }
+}
